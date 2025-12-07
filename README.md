@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# Personal Portfolio - Interactive Book CV
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Một website CV cá nhân độc đáo với hiệu ứng lật trang sách 3D, được xây dựng bằng React.
 
-## Available Scripts
+## ✨ Tính năng
 
-In the project directory, you can run:
+- 📖 **Hiệu ứng sách 3D**: Giao diện CV dưới dạng quyển sách với hiệu ứng lật trang mượt mà
+- 🎬 **Animation xuất hiện**: Sách xuất hiện với hiệu ứng 3D ấn tượng khi tải trang
+- 🔄 **Lật trang tự động**: Tự động lật trang về đầu sau khi xuất hiện hoàn toàn
+- 📱 **Responsive**: Thiết kế thích ứng với các kích thước màn hình khác nhau
+- 🎨 **UI hiện đại**: Sử dụng gradient, shadow và transitions mượt mà
+- 📄 **Nhiều trang**: Bao gồm Profile, Work Experience, Education, Skills, Services, Portfolio, và Contact
+
+## 🚀 Cài đặt và Chạy
+
+### Yêu cầu
+- Node.js (phiên bản 14 trở lên)
+- npm hoặc yarn
+
+### Các bước cài đặt
+
+1. Clone repository:
+```bash
+git clone https://github.com/longtn232003/Personal-Portfolio.git
+cd Personal-Portfolio
+```
+
+2. Cài đặt dependencies:
+```bash
+npm install
+```
+
+3. Chạy ứng dụng ở chế độ development:
+```bash
+npm start
+```
+
+Mở [http://localhost:3000](http://localhost:3000) để xem trong trình duyệt.
+
+4. Build cho production:
+```bash
+npm run build
+```
+
+## 🛠️ Công nghệ sử dụng
+
+- **React** - Framework JavaScript
+- **CSS3** - Animations & 3D transforms
+- **Boxicons** - Icon library
+- **Google Fonts (Poppins)** - Typography
+
+## 📂 Cấu trúc dự án
+
+```
+cv/
+├── public/
+│   ├── index.html
+│   ├── photo.jpg          # Ảnh profile
+│   └── ...
+├── src/
+│   ├── App.js             # Component chính
+│   ├── App.css            # Styles & animations
+│   ├── script.js          # Logic lật trang & animations
+│   └── index.js           # Entry point
+└── package.json
+```
+
+## 🎯 Các tính năng chính
+
+### Hiệu ứng Animation
+- **Book Appearance**: Sách xuất hiện với scale và rotation 3D (1.5s)
+- **Page Turning**: Lật trang với transform rotateY và transition mượt mà
+- **Opening Animation**: Tự động lật tất cả trang về đầu khi load
+
+### Tương tác
+- Nút Next/Prev để lật trang thủ công
+- Nút "Contact Me" lật đến trang cuối
+- Nút "Back to Profile" quay về trang đầu
+- Hover effects trên buttons và cards
+
+## 📝 Tùy chỉnh
+
+### Thay đổi thông tin cá nhân
+Chỉnh sửa file `src/App.js`:
+- Cập nhật tên, title, social media links
+- Thay đổi nội dung các section (Experience, Education, Skills, etc.)
+
+### Thay đổi màu sắc
+Chỉnh sửa CSS variables trong `src/App.css`:
+```css
+:root {
+  --bg-color: #081b29;
+  --main-color: #00abf0;
+  --text-color: #333;
+  /* ... */
+}
+```
+
+### Điều chỉnh animation timing
+Trong `src/script.js`, thay đổi:
+```javascript
+const bookAppearDelay = 1500; // Thời gian chờ animation xuất hiện sách
+```
+
+## 📜 Scripts có sẵn
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Chạy app ở chế độ development mode.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Chạy test suite.
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Build app cho production vào thư mục `build`.
 
 ### `npm run eject`
+**Lưu ý: đây là thao tác một chiều!**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 👨‍💻 Tác giả
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Đỗ Hoàng Long**
+- Facebook: [@hoang.long.191730](https://www.facebook.com/hoang.long.191730)
+- GitHub: [@longtn232003](https://github.com/longtn232003)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📄 License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project is open source and available under the [MIT License](LICENSE).
 
-## Learn More
+## 🙏 Acknowledgments
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+- Icons from [Boxicons](https://boxicons.com/)
+- Fonts from [Google Fonts](https://fonts.google.com/)
